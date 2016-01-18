@@ -1,13 +1,23 @@
 <manifest
     package="com.zjf.studydemo"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
+        android:name="com.zjf.studydemo.news.MyNewsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.zjf.studydemo.news.NewsItem,com.zjf.studydemo.news.NewsCategory"/>
+
         <activity android:name=".activity.TestActivity">
         </activity>
         <activity android:name=".fragment.FragmentMainActivity">

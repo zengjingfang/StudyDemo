@@ -4,7 +4,7 @@ package com.zjf.studydemo.news;
  * Administrator
  * 2016/1/16
  */
-public class NewsInfo {
+public class NewsInfo  {
     private String id;
     private String title;
     private String content;
